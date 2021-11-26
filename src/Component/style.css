@@ -189,6 +189,10 @@
         padding: 1rem 0;
     }
 
+    .group-level{
+        margin-top: 2rem;
+    }
+
 }
 
 @keyframes moveHand {

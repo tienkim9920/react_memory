@@ -30,9 +30,9 @@ function Intro(props) {
 
     return (
         <div className="layout-intro">
-            <h1 className="mt-5 ps-3 pe-3">Tìm Mảnh Ghép Giống Nhau</h1>
+            <h1 className="mt-5 ps-3 pe-3">Mảnh Ghép Giống Nhau</h1>
 
-            <div className="mt-5">
+            <div className="mt-4">
                 <h4>Vui lòng chọn cấp độ chơi</h4>
             </div>
             <div className="group-level">

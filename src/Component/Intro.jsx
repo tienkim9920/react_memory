@@ -30,7 +30,7 @@ function Intro(props) {
 
     return (
         <div className="layout-intro">
-            <h1 className="mt-5">Tìm Mảnh Ghép Giống Nhau</h1>
+            <h1 className="mt-5 ps-3 pe-3">Tìm Mảnh Ghép Giống Nhau</h1>
 
             <div className="mt-5">
                 <h4>Vui lòng chọn cấp độ chơi</h4>
@@ -47,14 +47,15 @@ function Intro(props) {
                     ))}
                 </div>
             </div>
-            {
-                active.id && (
-                    <div className="d-flex justify-content-end">
-                        <div className="btn-play" onClick={handlerDirect}>Chơi Thôi</div>
-                    </div>
-                )
-            }
-
+            <div className="pt-3 pb-3">
+                {
+                    active.id && (
+                        <div className="d-flex justify-content-end">
+                            <div className="btn-play" onClick={handlerDirect}>Chơi Thôi</div>
+                        </div>
+                    )
+                }
+            </div>
         </div>
     );
 }

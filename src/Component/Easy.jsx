@@ -43,6 +43,16 @@ function Easy(props) {
 
     const handlerClick = (e, index) => {
 
+        // Nếu ô đó đã được mở thì return
+        if (e.status){
+            return
+        }
+
+        // Nếu lượt sau giống với lượt đầu thì return
+        if (itemA.id === e.id){
+            return
+        }
+
         // Nếu itemA chưa có thì gán cho itemA sau đó return
         if (!itemA.id){
             setItemA(e)
@@ -127,6 +137,7 @@ function Easy(props) {
 
         const second = setTimeout(() => {
             if (time === 0) {
+                setTime(0)
                 return
             }
 
@@ -150,16 +161,16 @@ function Easy(props) {
                     <span className="time-out">{Math.floor(time % 3600 / 60)} phút {Math.floor(time % 3600 % 60)} giây</span>
                 </div>
             </div>
-            <div className="group-piece">
+            <div className="group-piece-easy">
                 {
                     item && item.map((e, index) => (
                         <div className="box-item" key={e.id} onClick={() => handlerClick(e)}>
-                            <div className={itemA.id === e.id || itemB.id === e.id || e.status ? 'card-item item-back active' : 'card-item item-back'}>
+                            <div className={itemA.id === e.id || itemB.id === e.id || e.status ? 'card-item-easy item-back active' : 'card-item-easy item-back'}>
                                 <div className="d-flex justify-content-center align-items-center" style={{ height: '100%'}}>
-                                    <img src={e.image} className="image-item" alt="" />
+                                    <img src={e.image} className="image-item-easy" alt="" />
                                 </div>
                             </div>
-                            <div className={itemA.id === e.id || itemB.id === e.id || e.status  ? 'card-item item-front active' : 'card-item item-front'}>
+                            <div className={itemA.id === e.id || itemB.id === e.id || e.status  ? 'card-item-easy item-front active' : 'card-item-easy item-front'}>
                                 
                             </div>
                         </div>
@@ -181,7 +192,18 @@ function Easy(props) {
                     </div>
                 )
             }
-            
+            {
+                time === 0 && (
+                    <div className="bg-win">
+                        <div>
+                            <h1>Bạn đã thua</h1>
+                            <div className="d-flex justify-content-center">
+                                <div className="btn-replay" onClick={replay}>Chơi lại</div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
         </div>
     );
 }

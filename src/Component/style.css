@@ -62,6 +62,7 @@
 .group-time{
     width: 100%;
     position: relative;
+    padding: 0rem 0 2rem 0;
 }
 
 .time-back{
@@ -85,8 +86,9 @@
     position: absolute;
 }
 
-.group-piece{
-    margin-top: 5rem;
+.group-piece-easy{
+    margin-top: 3rem;
+    padding: 1rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 30px;
@@ -98,7 +100,7 @@
     cursor: pointer;
 }
 
-.image-item{
+.image-item-easy{
     width: 70px;
     height: 70px;
 }
@@ -124,7 +126,7 @@
     transform: rotateY(0);
 }
 
-.card-item{
+.card-item-easy{
     position: absolute;
     top: 0;
     left: 0;
@@ -169,19 +171,24 @@
         width: 80%;
     }
 
-    .image-item{
+    .image-item-easy{
         width: 50px;
         height: 50px;
     }
 
-    .card-item{
+    .card-item-easy{
         width: 80px;
         height: 80px;
     }
 
-    .group-piece{
+    .group-piece-easy{
         grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     }
+
+    .group-time{
+        padding: 1rem 0;
+    }
+
 }
 
 @keyframes moveHand {

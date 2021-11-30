@@ -7,6 +7,13 @@ import knight from './knight.png'
 import shield from './shield.png'
 import strawberry from './strawberry.png'
 import swords from './swords.png'
+import diamond from './diamond.png'
+import motor from './motor.png'
+import like from './like.png'
+import telephone from './telephone.png'
+import planet from './planet.png'
+import compass from './compass.png'
+import covid19 from './covid-19.png'
 
 const image = {
     amor,
@@ -17,7 +24,14 @@ const image = {
     knight,
     shield,
     strawberry,
-    swords
+    swords,
+    diamond,
+    motor,
+    telephone,
+    like,
+    planet,
+    covid19,
+    compass
 }
 
 export default image

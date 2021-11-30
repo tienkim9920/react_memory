@@ -59,6 +59,11 @@
     margin: 2rem auto;
 }
 
+.layout-normal{
+    width: 50%;
+    margin: 2rem auto;
+}
+
 .group-time{
     width: 100%;
     position: relative;
@@ -95,6 +100,15 @@
     height: 500px;
 }
 
+.group-piece-normal{
+    margin-top: 3rem;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 20px;
+    height: 500px;
+}
+
 .box-item{
     position: relative;
     cursor: pointer;
@@ -103,6 +117,11 @@
 .image-item-easy{
     width: 70px;
     height: 70px;
+}
+
+.image-item-normal{
+    width: 50px;
+    height: 50px;
 }
 
 .item-front{
@@ -120,6 +139,7 @@
 .item-back{
     width: 100%;
     transform: rotateY(180deg);
+    background-color: rgba(77, 77, 77, 0.6);
 }
 
 .item-back.active{
@@ -132,6 +152,19 @@
     left: 0;
     width: 130px;
     height: 130px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    border-radius: 6px;
+    border: 2px solid #dbdbdb;
+}
+
+.card-item-normal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
     backface-visibility: hidden;
     overflow: hidden;
     transition: all .6s ease-in-out;
@@ -171,7 +204,16 @@
         width: 80%;
     }
 
+    .layout-normal{
+        width: 80%;
+    }
+
     .image-item-easy{
+        width: 50px;
+        height: 50px;
+    }
+
+    .image-item-normal{
         width: 50px;
         height: 50px;
     }
@@ -181,8 +223,18 @@
         height: 80px;
     }
 
+    .card-item-normal{
+        width: 80px;
+        height: 80px;
+    }
+
     .group-piece-easy{
         grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+
+    .group-piece-normal{
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        height: 900px;
     }
 
     .group-time{
